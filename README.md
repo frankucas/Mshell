@@ -29,7 +29,7 @@
 
 	Mshell will generate a log directory (resp. file) for every run (resp. connected server). The log directory (file resp.) is named according to program start time (resp. ip).
 
-## Conact
+## Contact
   Author: Penglai Cui
   Company: Institute of computing technology, China  
 

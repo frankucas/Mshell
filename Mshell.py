@@ -16,7 +16,7 @@ class Controller(assistBase):
     def __init__(self):
         self.log_time = time.strftime("%Y-%m-%d_%H-%M-%S",time.localtime())
         self.log_path = f"log\\{self.log_time}"
-        os.mkdir(self.log_path)
+        os.makedirs(self.log_path)
         self.ssh_assist = remoteAssist()
         self.load_json  = loadJson()
         self.local_command = {
