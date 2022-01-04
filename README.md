@@ -32,5 +32,5 @@ Mshell will generate a log directory (resp. file) for every run (resp. connected
 
 ## Contact
 
-Author: Penglai Cui.
+Author: Penglai Cui.<br /> 
 Company: Institute of computing technology, China. 
