@@ -4,11 +4,11 @@
 
 ## Mshell
 
-	With the help of Mshell, users can manipulate multiple servers concurrently. The input command will be sent to all configured servers through ssh.
+With the help of Mshell, users can manipulate multiple servers concurrently. The input command will be sent to all configured servers through ssh.
 
 ## Platform 
 
-	Windows 10
+Windows 10
 
 ## Getting Started
 
@@ -27,12 +27,9 @@
 
 ## Log
 
-	Mshell will generate a log directory (resp. file) for every run (resp. connected server). The log directory (file resp.) is named according to program start time (resp. ip).
+Mshell will generate a log directory (resp. file) for every run (resp. connected server). The log directory (file resp.) is named according to program start time (resp. ip).
 
 ## Contact
-  Author: Penglai Cui
-  Company: Institute of computing technology, China  
 
-
-
-   
+Author: Penglai Cui
+Company: Institute of computing technology, China  
