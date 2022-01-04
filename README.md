@@ -12,8 +12,9 @@ Windows 10
 
 ## Getting Started
 
-1. Write down your configuration in servers.json
-2. Doule click Mshell.exe
+1. Download our release version.
+2. Write down your configuration in servers.json
+3. Doule click Mshell.exe
 
 ## inner command
 
@@ -31,5 +32,6 @@ Mshell will generate a log directory (resp. file) for every run (resp. connected
 
 ## Contact
 
-Author: Penglai Cui
-Company: Institute of computing technology, China  
+Author: Penglai Cui.
+
+Company: Institute of computing technology, China. 
