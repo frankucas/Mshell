@@ -24,7 +24,7 @@ Windows 10
   - show all connected servers.
 - sftp: 
   - transport a file to all remote servers.
-  - example: sftp slocal.txt remote.txt.
+  - example: sftp local.txt remote.txt.
 
 ## Log
 
