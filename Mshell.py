@@ -15,7 +15,7 @@ class Controller(assistBase):
     """
     def __init__(self):
         self.log_time = time.strftime("%Y-%m-%d_%H-%M-%S",time.localtime())
-        self.log_path = f"log\\{self.log_time}"
+        self.log_path = os.path.join("log",f"{self.log_time}")
         os.makedirs(self.log_path)
         self.ssh_assist = remoteAssist()
         self.load_json  = loadJson()
@@ -41,9 +41,8 @@ class Controller(assistBase):
     def init_ssh_and_sftp_sessions(self):
         sessions = []
         for configure in self.servers_configure:
-            ssh  = self.ssh_assist.init_ssh_session(configure)
-            sftp = ssh.open_sftp()
-            if ssh and sftp: sessions.append([configure[0],ssh,sftp])
+            if ssh := self.ssh_assist.init_ssh_session(configure):
+                sessions.append([configure[0],ssh,ssh.open_sftp()])
         return sessions
 
     @contextmanager

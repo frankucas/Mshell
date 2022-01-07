@@ -3,6 +3,7 @@ from contextlib import contextmanager
 from colorama import Fore,Style,init
 import json
 import time
+import os
 
 class loadJson:
     def is_annotation(self, line):
@@ -33,11 +34,6 @@ class reloadException(Exception):
         return "Reloading..."
 
 class assistBase:
-    @contextmanager
-    def pass_connect_fail(self, ip, method="SSH"):
-        try: yield
-        except: assistBase.print_dangerous_message(f"{method} connection to {ip} failed.")
-    
     @staticmethod
     def print_dangerous_message(message):
         init(autoreset=True)
@@ -48,6 +44,11 @@ class assistBase:
             f.writelines(content)
 
 class remoteAssist(assistBase):
+    @contextmanager
+    def pass_connect_fail(self, ip, method="SSH"):
+        try: yield
+        except: assistBase.print_dangerous_message(f"{method} connection to {ip} failed.")
+
     @contextmanager
     def path_not_found(self, ip):
         try: yield
@@ -72,7 +73,7 @@ class remoteAssist(assistBase):
         return line 
 
     def store_stdout(self, ip, path, stdout, command):
-        stderr_str,log_path = "",path+f"\{ip}"
+        stderr_str,log_path = "",os.path.join(f"{path}",f"{ip}")
         self.store_txt_file(log_path, f"CMD: {command}\n")
         while not stdout.channel.exit_status_ready():
             stderr_str += self.store_line(log_path, stdout.readline)
