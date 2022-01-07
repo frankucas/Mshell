@@ -8,7 +8,7 @@ With the help of Mshell, users can manipulate multiple servers concurrently. The
 
 ## Requirements 
 
-Windows 10
+Windows 10 or Luinux <br />
 Python (>=3.8)
 
 ## Getting Started
