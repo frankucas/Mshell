@@ -6,9 +6,10 @@
 
 With the help of Mshell, users can manipulate multiple servers concurrently. The input command will be sent to all configured servers through ssh.
 
-## Platform 
+## Requirements 
 
 Windows 10
+Python (>=3.8)
 
 ## Getting Started
 
@@ -32,5 +33,5 @@ Mshell will generate a log directory (resp. file) for every run (resp. connected
 
 ## Contact
 
-Author: Penglai Cui.<br /> 
+Author: Penglai Cui. <br /> 
 Company: Institute of computing technology, China. 
